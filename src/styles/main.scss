@@ -1,8 +1,7 @@
-$calendar__width: 800px;
+$calendar__count: 7;
 $day__width: 100px;
 $body__height: 100vh;
 $day__height: 100px;
-
 $days__gap: 1px;
 $paddings: 10px;
 
@@ -20,7 +19,7 @@ body {
 
 .calendar {
   display: inline-flex;
-  max-width: $calendar__width;
+  max-width: $calendar__count * ($day__width + $paddings);
   flex-wrap: wrap;
   align-self: center;
   gap: $days__gap;
