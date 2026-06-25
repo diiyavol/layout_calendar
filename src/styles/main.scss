@@ -1,5 +1,8 @@
 $calendar__width: 800px;
 $day__width: 100px;
+$body__height: 100vh;
+$day__height: 100px;
+
 $days__gap: 1px;
 $paddings: 10px;
 
@@ -11,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: $body__height;
   margin: 0;
 }
 
@@ -26,7 +29,7 @@ body {
 
 .calendar__day {
   width: $day__width;
-  height: 100px;
+  height: $day__height;
   background-color: #eee;
   border: 1px solid black;
   transition: transform 0.5s, background-color 0.5s;
@@ -66,7 +69,7 @@ $start-days: (
 @each $day, $index in $start-days {
   .calendar--start--day--#{$day} {
     .calendar__day:first-child {
-      margin-left: calc((100px + 1px) * #{$index});
+      margin-left: calc(($day__width + $days__gap) * #{$index});
     }
   }
 }
