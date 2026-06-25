@@ -1,3 +1,8 @@
+$calendar__width: 800px;
+$day__width: 100px;
+$days__gap: 1px;
+$paddings: 10px;
+
 * {
   box-sizing: border-box;
 }
@@ -12,23 +17,23 @@ body {
 
 .calendar {
   display: inline-flex;
-  max-width: 800px;
+  max-width: $calendar__width;
   flex-wrap: wrap;
   align-self: center;
-  gap: 1px;
-  padding-left: 10px;
+  gap: $days__gap;
+  padding-left: $paddings;
 }
 
 .calendar__day {
-  cursor: pointer;
-  width: 100px;
+  width: $day__width;
   height: 100px;
   background-color: #eee;
   border: 1px solid black;
-  transition: transform 500ms;
+  transition: transform 0.5s, background-color 0.5s;
 }
 
 .calendar__day:hover {
+  cursor: pointer;
   transform: translateY(-20px);
   background-color: #ffbfcb;
 }
