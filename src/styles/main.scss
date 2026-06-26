@@ -67,7 +67,7 @@ $start-days: (
 );
 
 @each $day, $index in $start-days {
-  .calendar--start-day--#{$day} {
+  .calendar--start-day-#{$day} {
     .calendar__day:first-child {
       margin-left: calc(($day__width + $days__gap) * #{$index});
     }
@@ -75,7 +75,7 @@ $start-days: (
 }
 
 @for $days-count from 28 through 31 {
-  .calendar--month-length--#{$days-count} {
+  .calendar--month-length-#{$days-count} {
     .calendar__day:nth-child(n + #{$days-count + 1}) {
       display: none;
     }
