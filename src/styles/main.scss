@@ -22,6 +22,7 @@ body {
   align-self: center;
   gap: $days__gap;
   padding-left: $paddings;
+  padding-right: $paddings;
 }
 
 .calendar__day {
